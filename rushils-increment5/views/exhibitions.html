@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Your name" />
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems" />
+    <meta name="description" content="MonoMuse website redesign project" />
+    <!-- Shared site styles -->
+    <script src="../static/script.js" defer></script>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>MonoMuse | Exhibitions</title>
+  </head>
+  <body onload="addYear()">
+
+    <div class="container">
+      <header class="header">
+        <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+      </header>
+
+      <nav class="nav_bar">
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="tickets.html">Tickets</a>
+        <a href="checkout.html">Checkout</a>
+        <button type="button" class="nav_toggle" onclick="toggleNav()" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
+      </nav>
+
+      <main class="main">
+        <h1>Current Exhibitions</h1>
+
+        <h2>Digital Dreams: Art in the Age of Algorithms</h2>
+        <p>
+          This exhibition explores how artists are using algorithms, artificial intelligence,
+          and generative tools to create new forms of digital expression. Through interactive
+          displays and dynamic visuals, visitors can see how machines and human creativity work
+          together to produce art that evolves in real time.
+        </p>
+
+        <h2>Code &amp; Canvas: The Language of Creative Technology</h2>
+        <p>
+          Code &amp; Canvas highlights the ways programming has become a medium for artistic
+          creation. Featuring works by digital artists and designers, the exhibition showcases
+          installations, projections, and interactive pieces that reveal how lines of code can
+          transform into immersive visual experiences.
+        </p>
+
+        <section class="gallery_section" aria-label="Interactive exhibition gallery">
+          <h2>Interactive Gallery</h2>
+          <p>
+            Browse three concept visuals from MonoMuse’s current season using the gallery
+            controls or your keyboard while focusing the gallery section.
+          </p>
+          <div class="gallery_shell" id="galleryShell" tabindex="0">
+            <figure class="gallery_slide active_slide">
+              <img src="../static/Canova_Raum_5_1920_xl.jpg" alt="Museum gallery interior with classical sculptures on display in a bright exhibition room.">
+              <figcaption>Gallery view featuring sculptural work in a formal exhibition setting.</figcaption>
+            </figure>
+            <figure class="gallery_slide">
+              <img src="../static/merlin_193884324_93c3f30f-a61b-41b3-baaa-9260d21c5fc6-superJumbo.jpg" alt="Visitors moving through a large museum exhibition hall with artwork and displays.">
+              <figcaption>Visitors exploring a large-scale museum exhibition environment.</figcaption>
+            </figure>
+            <figure class="gallery_slide">
+              <img src="../static/museum.webp" alt="Contemporary museum building and exhibition space used as a gallery image for MonoMuse.">
+              <figcaption>Contemporary museum architecture supporting an immersive visitor experience.</figcaption>
+            </figure>
+          </div>
+          <div class="gallery_controls">
+            <button type="button" class="toggle_button" id="prevSlide">Previous</button>
+            <button type="button" class="toggle_button" id="nextSlide">Next</button>
+          </div>
+          <p class="attribution_note">Gallery images use the files uploaded to this project for the exhibition slideshow.</p>
+        </section>
+
+        <section class="video_section">
+          <h2>Featured Museum Video</h2>
+          <iframe
+            class="video_frame"
+            src="https://www.youtube.com/embed/mOiEOs3ZlT8"
+            title="Museum video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <p class="attribution_note">
+            Embedded from YouTube:
+            <a href="https://www.youtube.com/watch?v=mOiEOs3ZlT8">Museum feature video</a>.
+          </p>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p id="copyYear"></p>
+      </footer>
+    </div>
+
+  </body>
+</html>
