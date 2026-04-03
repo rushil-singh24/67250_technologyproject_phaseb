@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Your name" />
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems" />
+    <meta name="description" content="MonoMuse website redesign project" />
+    <!-- Leaflet CSS for the interactive OpenStreetMap view -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      crossorigin=""
+    >
+    <!-- Shared site styles -->
+    <link rel="stylesheet" href="../static/style.css">
+    <!-- Leaflet JS for the interactive OpenStreetMap view -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      crossorigin=""
+    ></script>
+    <script src="../static/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>MonoMuse | Explore</title>
+  </head>
+  <body onload="addYear()">
+
+    <div class="container">
+      <header class="header">
+        <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+      </header>
+
+      <nav class="nav_bar">
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="tickets.html">Tickets</a>
+        <a href="checkout.html">Checkout</a>
+        <button type="button" class="nav_toggle" onclick="toggleNav()" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
+      </nav>
+
+      <main class="main">
+        <h1>Explore the Museum</h1>
+        <p>
+          Plan your visit around experiences that combine digital media, sound, and
+          installation-based storytelling. Each gallery is designed to encourage curiosity and
+          active participation.
+        </p>
+
+        <table>
+          <tr>
+            <th>Experience</th>
+            <th>Description</th>
+            <th>Best For</th>
+          </tr>
+          <tr>
+            <td>Interactive Lab</td>
+            <td>Hands-on exhibits that let visitors experiment with light, motion, and code.</td>
+            <td>Families and students</td>
+          </tr>
+          <tr>
+            <td>Media Gallery</td>
+            <td>Projection-driven artwork and immersive digital storytelling installations.</td>
+            <td>First-time visitors</td>
+          </tr>
+          <tr>
+            <td>Artist Studio</td>
+            <td>Live demos and rotating creative technology workshops with guest artists.</td>
+            <td>Design and art enthusiasts</td>
+          </tr>
+        </table>
+
+        <section class="map_section">
+          <h2>Visit MonoMuse</h2>
+          <p>
+            Use the map below to locate the museum and plan your route before your visit.
+          </p>
+          <div class="info_grid">
+            <article class="info_card">
+              <h3>Address</h3>
+              <p>5000 Forbes Avenue, Pittsburgh, PA 15213</p>
+              <p>Located within walking distance of Carnegie Mellon University and Schenley Plaza.</p>
+            </article>
+            <article class="info_card">
+              <h3>Directions &amp; Contact</h3>
+              <p>Parking is available in nearby garages, and Port Authority buses stop on Forbes Avenue.</p>
+              <p>Email: visit@monomuse.org | Phone: (412) 555-0118</p>
+            </article>
+          </div>
+          <div id="map"></div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p id="copyYear"></p>
+      </footer>
+    </div>
+
+  </body>
+</html>

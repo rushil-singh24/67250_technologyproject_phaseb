@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Your name" />
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems" />
+    <meta name="description" content="MonoMuse website redesign project" />
+    <!-- Shared site styles -->
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- jQuery CDN for the homepage read more/read less interaction -->
+    <script src="https://code.jquery.com/jquery-4.0.0-beta.min.js"></script>
+    <script src="./static/script.js" defer></script>
+    <title>MonoMuse | Home</title>
+  </head>
+  <body onload="addYear()">
+
+  <div class="container">
+
+    <header class="header">
+      <img id="logo" src="./static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+    </header>
+
+    <nav class="nav_bar">
+      <a href="index.html">Home</a>
+      <a href="views/explore.html">Explore</a>
+      <a href="views/exhibitions.html">Exhibitions</a>
+      <a href="views/tickets.html">Tickets</a>
+      <a href="views/checkout.html">Checkout</a>
+      <button type="button" class="nav_toggle" onclick="toggleNav()" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
+    </nav>
+
+    <main class="main">
+      <h1 id="greeting">Welcome to MonoMuse</h1>
+
+      <p id="shortIntro">
+        MonoMuse is a contemporary museum dedicated to exploring the intersection of art,
+        technology, and human creativity through immersive exhibitions and interactive
+        installations.
+      </p>
+
+      <a class="cta" href="views/tickets.html">Buy Tickets</a>
+
+      <p id="longIntro">
+        Through rotating collections, artist talks, and hands-on media experiences, MonoMuse
+        invites visitors to discover how digital innovation is transforming the way we create,
+        experience, and understand art. Whether you are exploring experimental projections or
+        interactive sculpture, each visit is designed to spark curiosity and conversation.
+      </p>
+
+      <button id="readMore" class="toggle_button" type="button">Read More</button>
+      <button id="readLess" class="toggle_button" type="button">Read Less</button>
+
+      <section class="info_grid">
+        <article class="info_card">
+          <h2>Hours &amp; Admission</h2>
+          <p>Tuesday to Thursday: 10:00 AM to 5:00 PM</p>
+          <p>Friday: 10:00 AM to 8:00 PM</p>
+          <p>Saturday to Sunday: 11:00 AM to 6:00 PM</p>
+          <p>Monday: Closed</p>
+          <p>General admission starts at $18. Students and members can review pricing on the Tickets page.</p>
+        </article>
+
+        <article class="info_card">
+          <h2>Plan Your Visit</h2>
+          <p>MonoMuse is located near Carnegie Mellon University in Pittsburgh, making it easy to reach by bus, bike, or car.</p>
+          <p>Use the Explore page for directions and the interactive map before you arrive.</p>
+          <p>Contact: visit@monomuse.org | (412) 555-0118</p>
+        </article>
+      </section>
+
+      <section class="support_section">
+        <h2>Membership &amp; Donations</h2>
+        <p>
+          Support experimental exhibitions, public programs, and student workshops by becoming
+          a member or making a one-time donation.
+        </p>
+        <p>
+          Members receive discounted tickets, preview-night invitations, and early registration
+          for artist-led events.
+        </p>
+        <a class="cta" href="views/checkout.html">Support MonoMuse</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p id="copyYear"></p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

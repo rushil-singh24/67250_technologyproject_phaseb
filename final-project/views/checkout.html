@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Your name" />
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems" />
+    <meta name="description" content="MonoMuse website redesign project" />
+    <!-- Shared site styles -->
+    <script src="../static/script.js" defer></script>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>MonoMuse | Checkout</title>
+  </head>
+  <body onload="addYear()">
+
+    <div class="container">
+      <header class="header">
+        <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+      </header>
+
+      <nav class="nav_bar">
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="tickets.html">Tickets</a>
+        <a href="checkout.html">Checkout</a>
+        <button type="button" class="nav_toggle" onclick="toggleNav()" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
+      </nav>
+
+      <main class="main">
+        <h1>Checkout Information</h1>
+        <p>
+          Complete the form below to simulate a ticket purchase. You can combine adult,
+          student, and member tickets in one order, and required fields will show an error if
+          they are missing or invalid.
+        </p>
+
+        <form id="checkoutForm" novalidate>
+          <label for="visitDate">Visit Date</label>
+          <input type="date" id="visitDate" name="visitDate" required>
+          <p class="error_message" id="visitDateError"></p>
+
+          <h2>Ticket Quantities</h2>
+
+          <label for="adultQuantity">Adult Tickets ($18 each)</label>
+          <input type="number" id="adultQuantity" name="adultQuantity" min="0" max="10" value="1" required>
+
+          <label for="studentQuantity">Student Tickets ($10 each)</label>
+          <input type="number" id="studentQuantity" name="studentQuantity" min="0" max="10" value="0" required>
+
+          <label for="memberQuantity">Member Tickets ($15 each)</label>
+          <input type="number" id="memberQuantity" name="memberQuantity" min="0" max="10" value="0" required>
+          <p class="error_message" id="ticketMixError"></p>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          <p class="error_message" id="emailError"></p>
+
+          <label for="zipCode">Zip Code (optional)</label>
+          <input type="text" id="zipCode" name="zipCode" inputmode="numeric" maxlength="5">
+          <p class="error_message" id="zipCodeError"></p>
+
+          <label class="checkbox_row" for="mailingList">
+            <input type="checkbox" id="mailingList" name="mailingList">
+            Join our mailing list
+          </label>
+
+          <div class="total_box">
+            <h2>Order Total</h2>
+            <p id="orderTotal">$18</p>
+            <p class="detail_note">Adult tickets are $18, student tickets are $10, and member tickets are $15.</p>
+          </div>
+
+          <button type="submit" class="cta">Place Order</button>
+        </form>
+      </main>
+
+      <footer class="footer">
+        <p id="copyYear"></p>
+      </footer>
+    </div>
+
+  </body>
+</html>
