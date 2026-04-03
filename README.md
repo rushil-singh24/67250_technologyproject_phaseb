@@ -4,11 +4,11 @@ This repository contains all project code and assets for each development stage 
 
 ## Folder Structure
 
-- `increment-1`
-- `increment-2`
-- `increment-3`
-- `increment-4`
-- `increment-5`
+- `rushils-increment1`
+- `rushils-increment2`
+- `rushils-increment3`
+- `rushils-increment4`
+- `rushils-increment5`
 - `final-project`
 
 ## GitHub Pages Deployment
